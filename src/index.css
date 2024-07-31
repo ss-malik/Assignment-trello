@@ -4,3 +4,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  max-height: 100vh;
+  background-color: #666464;
+}
