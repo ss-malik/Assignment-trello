@@ -3,9 +3,18 @@ import "./LoginandSignup.css";
 import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 const LoginandSignup = () => {
   const [action, setAction] = useState("Registration");
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    // login logic here (e.g., authentication with a server)
+    // After login:
+    navigate("/dashboard");
+  };
+
   return (
     <>
       <div className="container">
@@ -47,7 +56,13 @@ const LoginandSignup = () => {
           </div>
           <div
             className={action === "Registration" ? "submit gray" : "submit"}
-            onClick={() => setAction("Login")}
+            onClick={() => {
+              if (action === "Login") {
+                handleLogin();
+              } else {
+                setAction("Login");
+              }
+            }}
           >
             Login
           </div>
