@@ -15,6 +15,10 @@ const Board = () => {
       </div>
       <div className="board-cards">
         <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
     </div>
   );

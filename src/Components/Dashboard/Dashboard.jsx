@@ -13,6 +13,8 @@ const Dashboard = () => {
           <Board />
           <Board />
           <Board />
+          <Board />
+          <Board />
         </div>
       </div>
     </div>
