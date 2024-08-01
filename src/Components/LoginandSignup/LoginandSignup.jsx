@@ -57,11 +57,7 @@ const LoginandSignup = () => {
           <div
             className={action === "Registration" ? "submit gray" : "submit"}
             onClick={() => {
-              if (action === "Login") {
-                handleLogin();
-              } else {
-                setAction("Login");
-              }
+              action === "Login" ? handleLogin() : setAction("Login");
             }}
           >
             Login
